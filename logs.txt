@@ -1,0 +1,208 @@
+[2026-04-26 16:50:46.132 +0530] [32mINFO[39m: [36mUsing Browserbase credentials[39m
+    [35mcategory[39m: "init"
+[2026-04-26 16:50:46.133 +0530] [32mINFO[39m: [36mStarting browserbase session[39m
+    [35mcategory[39m: "init"
+[2026-04-26 16:50:46.133 +0530] [32mINFO[39m: [36mCreating new browserbase session...[39m
+    [35mcategory[39m: "init"
+
+Brand Abuse Check Started
+Target: https://vibhorfoods.com
+Brand being checked: Flipkart, Flipkart Minutes, Cleartrip, OR Myntra
+Watch live: https://browserbase.com/sessions/db266f3a-95ce-479a-82f6-299939a4b64b
+
+[2026-04-26 16:50:50.868 +0530] [32mINFO[39m: [36mBrowserbase session started[39m
+    [35mcategory[39m: "init"
+    [35msessionUrl[39m: "https://www.browserbase.com/sessions/db266f3a-95ce-479a-82f6-299939a4b64b"
+    [35mdebugUrl[39m: "https://www.browserbase.com/devtools/inspector.html?wss=connect-v2.usw2.browserbase.com/debug/db266f3a-95ce-479a-82f6-299939a4b64b/devtools/page/6B0891FF88FE6D57141E784216A5E8DC?debug=true"
+    [35msessionId[39m: "db266f3a-95ce-479a-82f6-299939a4b64b"
+Landing page screenshot saved.
+
+Extracting brand abuse signals...
+[2026-04-26 16:51:00.038 +0530] [32mINFO[39m: [36mStarting extraction using a11y snapshot[39m
+    [35mcategory[39m: "extraction"
+    [35minstruction[39m: "Analyze this page for brand abuse / phishing indicators against the brand \"Flipkart, Flipkart Minutes, Cleartrip, OR Myntra\". Extract the following:\n    - page title and any brand name shown\n    - logo description (color, text, style)\n    - color scheme used (primary colors)\n    - any login or signup forms present\n    - any use of the word \"Flipkart, Flipkart Minutes, Cleartrip, OR Myntra\" or its variants\n    - any copied UI elements that mimic Flipkart, Flipkart Minutes, Cleartrip, OR Myntra\n    - the domain shown in any links or buttons\n    - any trust signals (SSL badges, \"official\" text, etc.)\n    - any suspicious elements (urgent messages, fake discounts, requests for credentials)"
+[2026-04-26 16:51:01.455 +0530] [32mINFO[39m: [36mresponse[39m
+    [35mcategory[39m: "aisdk"
+    [35mresponse[39m: {
+      "object": {
+        "pageTitle": "Vibhor Cooking Oils for Healthy Indian Kitchens",
+        "brandNameShown": "Vibhor",
+        "logoDescription": "vibhor logo image (no text description available)",
+        "colorScheme": "Not explicitly described; images and text suggest natural, warm colors typical for cooking oil branding",
+        "hasLoginForm": false,
+        "hasSignupForm": false,
+        "flipkartMentions": "",
+        "copiedUIElements": "",
+        "suspiciousLinks": "",
+        "trustSignals": "",
+        "suspiciousElements": ""
+      },
+      "usage": {
+        "inputTokens": 3016,
+        "outputTokens": 96,
+        "totalTokens": 3112,
+        "reasoningTokens": 0,
+        "cachedInputTokens": 0
+      },
+      "finishReason": "stop"
+    }
+[2026-04-26 16:51:02.705 +0530] [32mINFO[39m: [36mresponse[39m
+    [35mcategory[39m: "aisdk"
+    [35mresponse[39m: {
+      "object": {
+        "progress": "Extracted page title, brand name, logo description, color scheme, login/signup forms, brand mentions, copied UI elements, domain links, trust signals, and suspicious elements relevant to Flipkart, Flipkart Minutes, Cleartrip, or Myntra.",
+        "completed": true
+      },
+      "usage": {
+        "inputTokens": 490,
+        "outputTokens": 58,
+        "totalTokens": 548,
+        "reasoningTokens": 0,
+        "cachedInputTokens": 0
+      },
+      "finishReason": "stop"
+    }
+[2026-04-26 16:51:02.706 +0530] [32mINFO[39m: [36mExtraction completed successfully[39m
+    [35mcategory[39m: "extraction"
+    [35mprompt_tokens[39m: "3506"
+    [35mcompletion_tokens[39m: "154"
+    [35minference_time_ms[39m: "2666"
+    [35mresult[39m: "{\"pageTitle\":\"Vibhor Cooking Oils for Healthy Indian Kitchens\",\"brandNameShown\":\"Vibhor\",\"logoDescription\":\"vibhor logo image (no text description available)\",\"colorScheme\":\"Not explicitly described; ..."
+
+Brand Signals Extracted:
+{
+  "pageTitle": "Vibhor Cooking Oils for Healthy Indian Kitchens",
+  "brandNameShown": "Vibhor",
+  "logoDescription": "vibhor logo image (no text description available)",
+  "colorScheme": "Not explicitly described; images and text suggest natural, warm colors typical for cooking oil branding",
+  "hasLoginForm": false,
+  "hasSignupForm": false,
+  "flipkartMentions": "",
+  "copiedUIElements": "",
+  "suspiciousLinks": "",
+  "trustSignals": "",
+  "suspiciousElements": "",
+  "cacheStatus": "MISS"
+}
+
+Starting agent browse with auto-screenshots...
+[2026-04-26 16:51:03.063 +0530] [32mINFO[39m: [36mextract server cache miss[39m
+    [35mcategory[39m: "cache"
+[2026-04-26 16:51:03.065 +0530] [32mINFO[39m: [36mCreating v3 agent instance[39m
+    [35mcategory[39m: "agent"
+    [35mcua[39m: false
+    [35mmode[39m: "dom"
+    [35mmodel[39m: "google/gemini-2.5-flash"
+    [35msystemPrompt[39m: "You are a cybersecurity analyst performing a brand abuse / phishing investigation on the website https://vibhorfoods.com.\n    Your job is to:\n    1. Browse the site thoroughly — check the homepage, navigation links, login/signup pages, product pages, and footer.\n    2. Look for evidence that this site is impersonating Flipkart, Flipkart Minutes, Cleartrip, OR Myntra.\n    3. Do NOT enter any real credentials — if you encounter login forms, note them but do not submit.\n    4. Be methodical: check the header, footer, any modals, and at least 2–3 internal pages."
+[2026-04-26 16:51:04.370 +0530] [32mINFO[39m: [36mCreating v3 agent instance[39m
+    [35mcategory[39m: "agent"
+    [35mcua[39m: false
+    [35mmode[39m: "dom"
+    [35mmodel[39m: "google/gemini-2.5-flash"
+    [35msystemPrompt[39m: "You are a cybersecurity analyst performing a brand abuse / phishing investigation on the website https://vibhorfoods.com.\n    Your job is to:\n    1. Browse the site thoroughly — check the homepage, navigation links, login/signup pages, product pages, and footer.\n    2. Look for evidence that this site is impersonating Flipkart, Flipkart Minutes, Cleartrip, OR Myntra.\n    3. Do NOT enter any real credentials — if you encounter login forms, note them but do not submit.\n    4. Be methodical: check the header, footer, any modals, and at least 2–3 internal pages."
+[2026-04-26 16:51:07.319 +0530] [32mINFO[39m: [36mAgent calling tool: ariaTree[39m
+    [35mcategory[39m: "agent"
+Screenshot saved: screenshots/step-001-poll-1.png
+[2026-04-26 16:51:10.793 +0530] [32mINFO[39m: [36mAgent calling tool: act[39m
+    [35mcategory[39m: "agent"
+    [35marguments[39m: "click the Products link"
+[2026-04-26 16:51:14.073 +0530] [32mINFO[39m: [36mresponse[39m
+    [35mcategory[39m: "aisdk"
+    [35mresponse[39m: {
+      "object": {
+        "action": {
+          "elementId": "0-67",
+          "description": "Products link",
+          "method": "click",
+          "arguments": []
+        },
+        "twoStep": false
+      },
+      "usage": {
+        "inputTokens": 3733,
+        "outputTokens": 37,
+        "totalTokens": 3894,
+        "reasoningTokens": 124
+      },
+      "finishReason": "stop"
+    }
+Screenshot saved: screenshots/step-002-poll-2.png
+[2026-04-26 16:51:16.476 +0530] [32mINFO[39m: [36mAgent calling tool: ariaTree[39m
+    [35mcategory[39m: "agent"
+Screenshot saved: screenshots/step-003-poll-3.png
+Screenshot saved: screenshots/step-004-poll-4.png
+[2026-04-26 16:51:19.920 +0530] [32mINFO[39m: [36mAgent calling tool: scroll[39m
+    [35mcategory[39m: "agent"
+    [35marguments[39m: {
+      "direction": "down",
+      "percentage": 80
+    }
+Screenshot saved: screenshots/step-005-poll-5.png
+[2026-04-26 16:51:21.545 +0530] [32mINFO[39m: [36mAgent calling tool: ariaTree[39m
+    [35mcategory[39m: "agent"
+Screenshot saved: screenshots/step-006-poll-6.png
+[2026-04-26 16:51:24.107 +0530] [32mINFO[39m: [36mAgent calling tool: act[39m
+    [35mcategory[39m: "agent"
+    [35marguments[39m: "click the Learn More arrow link for Refined Soyabean Oil"
+[2026-04-26 16:51:26.375 +0530] [32mINFO[39m: [36mresponse[39m
+    [35mcategory[39m: "aisdk"
+    [35mresponse[39m: {
+      "object": {
+        "action": {
+          "elementId": "0-2851",
+          "description": "Learn More arrow",
+          "method": "click",
+          "arguments": []
+        },
+        "twoStep": false
+      },
+      "usage": {
+        "inputTokens": 2446,
+        "outputTokens": 40,
+        "totalTokens": 2677,
+        "reasoningTokens": 191
+      },
+      "finishReason": "stop"
+    }
+Screenshot saved: screenshots/step-007-poll-7.png
+[2026-04-26 16:51:29.007 +0530] [32mINFO[39m: [36mAgent calling tool: ariaTree[39m
+    [35mcategory[39m: "agent"
+Screenshot saved: screenshots/step-008-poll-8.png
+Screenshot saved: screenshots/step-009-poll-9.png
+[2026-04-26 16:51:35.200 +0530] [32mINFO[39m: [36mAgent calling tool: done[39m
+    [35mcategory[39m: "agent"
+Screenshot saved: screenshots/step-010-poll-10.png
+Screenshot saved: screenshots/step-011-poll-11.png
+
+
+============================================================
+BRAND ABUSE INVESTIGATION REPORT
+Target: https://vibhorfoods.com
+Brand: Flipkart, Flipkart Minutes, Cleartrip, OR Myntra
+Screenshots saved: 12 (in ./screenshots/)
+============================================================
+
+Extracted Signals:
+ {
+  "pageTitle": "Vibhor Cooking Oils for Healthy Indian Kitchens",
+  "brandNameShown": "Vibhor",
+  "logoDescription": "vibhor logo image (no text description available)",
+  "colorScheme": "Not explicitly described; images and text suggest natural, warm colors typical for cooking oil branding",
+  "hasLoginForm": false,
+  "hasSignupForm": false,
+  "flipkartMentions": "",
+  "copiedUIElements": "",
+  "suspiciousLinks": "",
+  "trustSignals": "",
+  "suspiciousElements": "",
+  "cacheStatus": "MISS"
+}
+
+Agent Findings:
+ The website https://vibhorfoods.com was investigated for brand abuse. I browsed the homepage, clicked on navigation items to reach a product listing page, and then a specific product page for Refined Soyabean Oil. I also inspected the footer for contact information and checked for login/signup pages. No evidence of impersonation or brand abuse of Flipkart, Flipkart Minutes, Cleartrip, or Myntra was found. The site consistently displayed 'Vibhor Foods' branding and products.
+============================================================
+
+Full report saved to brand-abuse-report.json
+[2026-04-26 16:51:39.228 +0530] [32mINFO[39m: [36mTask completed[39m
+    [35mcategory[39m: "agent"
+Screenshot saved: screenshots/step-012-poll-12.png

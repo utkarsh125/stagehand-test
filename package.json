@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "tsx index.ts"
+    "start": "tsx index.ts 2>&1 | tee -a logs.txt"
   },
   "dependencies": {
     "@browserbasehq/stagehand": "latest",

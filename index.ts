@@ -12,6 +12,14 @@ async function main() {
 
   const stagehand = new Stagehand({
     env: "BROWSERBASE",
+    // model: "google/gemini-2.5-flash",
+    // //The API key autoloads so from GOOGLE_GENERATIVE_AI_API_KEY set in the .env file.
+    // browserbaseSessionCreateParams: {
+    //   browserSettings: {
+    //     blockAds: true,
+    //     viewport: { width: 1288, height: 711 },
+    //   },
+    // },
   });
 
   await stagehand.init();
@@ -65,7 +73,11 @@ async function main() {
   //Agent browses the site and screenshots every step 
   console.log(`\nStarting agent browse with auto-screenshots...`);
 
+
+
   const agent = stagehand.agent({
+    mode: "dom",
+    model: "google/gemini-2.5-flash",
     systemPrompt: `You are a cybersecurity analyst performing a brand abuse / phishing investigation on the website ${TARGET_URL}.
     Your job is to:
     1. Browse the site thoroughly — check the homepage, navigation links, login/signup pages, product pages, and footer.
@@ -91,6 +103,7 @@ async function main() {
     inspect the footer for contact info and legal notices, and check at least 2 product or category pages. 
     At the end, summarize your findings: Is this site impersonating ${BRAND_NAME}? What evidence did you find?`,
     maxSteps: 20,
+    highlightCursor: true,
   });
 
   // Stop polling once agent is done
