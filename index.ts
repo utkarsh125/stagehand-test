@@ -3,8 +3,8 @@ import * as fs from "fs";
 import { Stagehand } from "@browserbasehq/stagehand";
 import { z } from "zod/v3";
 
-const TARGET_URL = "https://utkarshpandey.in/";
-const BRAND_NAME = "Utkarsh";
+const TARGET_URL = "https://vibhorfoods.com";
+const BRAND_NAME = "Flipkart, Flipkart Minutes, Cleartrip, OR Myntra";
 
 async function main() {
   fs.mkdirSync("screenshots", { recursive: true });
