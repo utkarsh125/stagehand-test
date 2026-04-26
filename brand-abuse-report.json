@@ -1,0 +1,21 @@
+{
+  "target": "https://utkarshpandey.in/",
+  "brand": "Utkarsh",
+  "timestamp": "2026-04-26T09:40:10.979Z",
+  "screenshotCount": 14,
+  "extractedSignals": {
+    "pageTitle": "Utkarsh — Fullstack Developer",
+    "brandNameShown": "Utkarsh",
+    "logoDescription": "The logo text is \"Utkarsh\" styled as a heading with a dash and the phrase \"Fullstack Developer\" following it. No specific color or style details are provided in the text.",
+    "colorScheme": "Not explicitly stated in the text; images and UI elements are mentioned but colors are not described.",
+    "hasLoginForm": false,
+    "hasSignupForm": false,
+    "flipkartMentions": "",
+    "copiedUIElements": "",
+    "suspiciousLinks": "",
+    "trustSignals": "",
+    "suspiciousElements": "",
+    "cacheStatus": "MISS"
+  },
+  "agentFindings": "I have browsed the homepage, checked navigation links, verified there are no login or signup pages, inspected footer content, and explored at least two project pages in detail. The website represents an individual named Utkarsh Pandey, who is a full-stack developer showcasing personal projects, skills, resume, and contact information. There are no signs of brand abuse, impersonation, or misuse of the Utkarsh name beyond legitimate self-presentation. Social media links point to authentic profiles.\n\nTherefore, this site is not impersonating Utkarsh or abusing the brand; rather, it is a personal portfolio site by Utkarsh Pandey himself."
+}
